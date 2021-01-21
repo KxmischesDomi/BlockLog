@@ -1,0 +1,10 @@
+name: BlockLog
+version: 1.0
+api-version: 1.13
+main: net.codingarea.blocklog.BlockLogPlugin
+author: KxmischesDomi
+
+commands:
+  logstick:
+    permission: blocklog.logstick
+    aliases: Gives a Stick with which you can check a Block Log
