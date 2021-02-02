@@ -25,8 +25,9 @@ import java.util.UUID;
  */
 public class BlockLogManager {
 
-	private LiteSQL sql;
-	private ItemStack logStick = new ItemBuilder(Material.STICK).setDisplayName("§cLog-Stick").setLore("§cLeft click block to see its log").setUnbreakable().build();
+	private final LiteSQL sql;
+	private final ItemStack logStick = new ItemBuilder(Material.STICK).setDisplayName("§cLog-Stick").setLore("§cLeft click block to see its log").setUnbreakable().build();
+	private final ItemStack interactLogStick = new ItemBuilder(Material.STICK).setDisplayName("§eInteract-Log-Stick").setLore("§cLeft click block to see interaction log").setUnbreakable().build();
 
 	public BlockLogManager(@Nonnull LiteSQL sql) {
 		this.sql = sql;
@@ -94,6 +95,12 @@ public class BlockLogManager {
 	@CheckReturnValue
 	public ItemStack getLogStick() {
 		return logStick;
+	}
+
+	@Nonnull
+	@CheckReturnValue
+	public ItemStack getInteractLogStick() {
+		return interactLogStick;
 	}
 
 	@Nonnull
