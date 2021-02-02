@@ -1,5 +1,6 @@
 package net.codingarea.blocklog;
 
+import net.codingarea.blocklog.commands.InteractLogStickCommand;
 import net.codingarea.blocklog.commands.LogStickCommand;
 import net.codingarea.blocklog.listeners.BlockListener;
 import net.codingarea.engine.sql.LiteSQL;
@@ -29,6 +30,7 @@ public class BlockLogPlugin extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		getCommand("logstick").setExecutor(new LogStickCommand());
+		getCommand("interactstick").setExecutor(new InteractLogStickCommand());
 		Bukkit.getPluginManager().registerEvents(new BlockListener(), this);
 	}
 
