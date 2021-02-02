@@ -7,4 +7,7 @@ author: KxmischesDomi
 commands:
   logstick:
     permission: blocklog.logstick
-    aliases: Gives a Stick with which you can check a Block Log
+    description: Gives a Stick with which you can check a Block Log
+  interactstick:
+    permission: blocklog.interactstick
+    description: Gives a Stick with which you can check a Interaction Log
